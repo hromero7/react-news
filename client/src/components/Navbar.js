@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
 
@@ -11,9 +12,34 @@ const NavBar = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div className="navbar-nav mx-auto">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
-                <a className="nav-link" href="#">Features</a>
-                <a className="nav-link" href="#">Pricing</a>
+                <Link to="/">
+                    <a className="nav-link active" aria-current="page" href="#">TRENDING</a>
+                </Link>
+                <Link to="/us">
+                    <a className="nav-link" href="#">US NEWS</a>
+                </Link>
+                <Link to="/politics">
+                    <a className="nav-link" href="#">POLITICS</a>
+                </Link>
+                <Link to="/sports">
+                    <a className="nav-link" href="#">SPORTS</a>
+                </Link>
+                <Link to="entertainment">
+                    <a className="nav-link" href="#">ENTERTAINMENT</a>
+                </Link>
+                <Link to="/business">
+                    <a className="nav-link" href="#">BUSINESS</a>
+                </Link>
+                <Link to="/technology">
+                    <a className="nav-link" href="#">TECH</a>
+                </Link>
+                <Link to="/health">
+                    <a className="nav-link" href="#">HEALTH</a>
+                </Link>
+                <Link to="/science">
+                    <a className="nav-link" href="#">SCIENCE</a>
+                </Link>
+                
               </div>
             </div>
           </div>
