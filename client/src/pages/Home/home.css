@@ -1,3 +1,16 @@
 .home-container {
+    margin-top: 20px;
+}
+
+.home-header {
+    font-size: 5rem;
+    margin: auto;
     margin-top: 50px;
+    max-width: 750px;
+    text-align: left;
+}
+
+.input-group {
+    max-width: 730px;
+    margin: auto;
 }

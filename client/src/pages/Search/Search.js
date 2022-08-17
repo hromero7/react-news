@@ -4,34 +4,27 @@ import Card from "../../components/Card";
 import NewsAPI from "../../utils/NewsAPI";
 import CategoryHeader from "../../components/CategoryHeader";
 import TopStoryCard from "../../components/TopStoryCard";
-import "./category.css";
 
-const Category = () => {
-    const { category } = useParams();
+const SearchPage = () => {
+
+    const { query } = useParams();
     const [articles, setArticles] = useState([]);
     const [firstArticle, setFirstArticle] = useState([]);
     useEffect(() => {
-        if (category === "politics" || category === "covid") {
-            NewsAPI.getSearchQuery(category)
+        query.toLowerCase().trim();
+        NewsAPI.getSearchQuery(query)
             .then(res => {
                 setFirstArticle(res.data.articles[0]);
                 res.data.articles.shift();
                 setArticles(res.data.articles);
-        });
-        }
-        else 
-        NewsAPI.getCategoryNews(category)
-        .then(res => {
-            setFirstArticle(res.data.articles[0]);
-            res.data.articles.shift();
-            setArticles(res.data.articles);
-        })
-    }, [category]);
-
+            });
+    }, [query]);
+    
     return (
         <div className="category-container">
-            <CategoryHeader category={category.toUpperCase()} />
-
+            <CategoryHeader category={query.toUpperCase()} />
+            {firstArticle.length > 0? 
+        <div> 
             <TopStoryCard data={firstArticle} />
             <div className="article">
             {
@@ -42,9 +35,11 @@ const Category = () => {
             })
             }
             </div>
-            
+
         </div>
-    )
+            : "no result found"}
+        </div>
+    );
 }
 
-export default Category;
+export default SearchPage;

@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'Bodoni';
+    src: url('fonts/OPTIBodoni-Antiqua.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/* NAV */
+
+.navbar-nav a {
+    font-size: 18px;
+}
+
+
+
 .header-container {
     display: flex;
     justify-content: center;
@@ -13,4 +28,134 @@
 .header-body {
     margin-top: 40px;
     
+}
+
+.navbar-nav .fa-magnifying-glass {
+    padding: 10px;
+}
+
+.navbar-nav .fa-magnifying-glass:hover {
+    border-radius: 10rem;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	70% {
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+.hidden {
+    display: none;
+}
+
+/* Category Header */ 
+
+.category-header {
+    max-width: 750px;
+    display: flex;
+    justify-content: left;
+    margin: auto;
+    margin-top: 50px;
+    color: black;
+    /* padding: 20px; */
+}
+
+.category {
+    font-size: 5rem;
+
+}
+/* Top Story Article CSS */
+
+.top-story {
+    max-width: 750px;
+    display: grid;
+    justify-content: left;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.top-story h1 {
+    text-align: left;
+    max-width: 750px;
+    margin-top: 15px;
+    margin-left: 10px;
+    /* font-size: 2.5rem; */
+    font-size: 2rem;
+}
+
+.title:hover {
+    text-decoration: underline;
+}
+
+.top-story p {
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: 0;
+    /* font-size: 2.5rem; */
+}
+.top-img {
+    width: 750px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-top: 0;
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.top-img:hover {
+    opacity: 0.7;
+}
+
+
+
+/* Article CSS */
+
+.story {
+    max-width: 300px;
+    display: grid;
+    justify-content: left;
+    margin-bottom: 20px;
+}
+
+.story h1 {
+    text-align: left;
+    max-width: 200px;
+    margin-top: 15px;
+    margin-left: 5px;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.story p {
+    text-align: left;
+    margin-left: 5px;
+    margin-bottom: 0;
+    font-size: 12px;
+}
+
+.article-img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-top: 0;
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.article-img:hover {
+    opacity: 0.7;
 }

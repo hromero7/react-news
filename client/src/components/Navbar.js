@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
 
+    const [hideSearchBar, setHideSearchBar] = useState(true);
+    const [searchTerm, setSearchTerm] = useState("");
+
+    const toggleSearch = () => {
+        setHideSearchBar(!hideSearchBar);
+    }
+
+    const handleChange = (e) => {
+        setSearchTerm(e.target.value);
+    }
+
+    const handleSearch = (e) => {
+        // e.preventDefault();
+        console.log(searchTerm)
+    }
+
     return (
+    <div>
         <nav className="navbar navbar-expand-lg navbar-light">
           <div className="container-fluid">
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
@@ -15,8 +32,8 @@ const NavBar = () => {
                 <Link to="/">
                     <a className="nav-link active" aria-current="page" href="#">TRENDING</a>
                 </Link>
-                <Link to="/us">
-                    <a className="nav-link" href="#">US NEWS</a>
+                <Link to="/covid">
+                    <a className="nav-link" href="#">COVID-19</a>
                 </Link>
                 <Link to="/politics">
                     <a className="nav-link" href="#">POLITICS</a>
@@ -39,11 +56,27 @@ const NavBar = () => {
                 <Link to="/science">
                     <a className="nav-link" href="#">SCIENCE</a>
                 </Link>
+                    <a className="nav-search" href="#" onClick={toggleSearch}>
+                        <i className="fa-solid fa-magnifying-glass"></i>
+                    </a>
                 
               </div>
             </div>
           </div>
         </nav>
+        
+        <div className={hideSearchBar? "hidden" : "search-container"}>
+                <form className="input-group mb-3">
+                    <input type="text" className="form-control" placeholder="SEARCH" aria-label="Search bar" aria-describedby="button-addon2" onChange={handleChange}/>
+                    <Link to={`/search/${searchTerm.trim()}`}>
+                    <button className="btn btn-outline-secondary" type="submit" id="button-addon2" onClick={handleSearch}>
+                        <i className="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    </Link>                
+                </form>
+            
+        </div>
+    </div>
     )
 }
 

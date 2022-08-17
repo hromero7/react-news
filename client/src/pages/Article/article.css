@@ -1,0 +1,86 @@
+/* ARTICLE MAIN PAGE CSS */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: black;
+}
+.article-main {
+    max-width: 750px;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.article-title {
+    text-align: left;
+}
+
+
+.article-author {
+    /* margin: auto; */
+    margin-top: 20px;
+    margin-bottom: 0;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.article-date {
+    margin-top: 0;
+    text-align: left;
+}
+
+.article-image {
+    width: 750px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.article-description {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+}
+
+.article-content {
+    font-size: 1.6rem;
+    text-align: left;
+    line-height: 2;
+}
+
+.article-url {
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 20px;
+    color: black;
+    margin-bottom: 50px;
+}
+
+.article-url:hover {
+    background-color: rgba(0, 0, 0, .3);
+    color: white;
+}
+
+/* VIDEO RESPONSIVENESS */
+
+.video-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .video-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }

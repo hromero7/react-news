@@ -1,0 +1,8 @@
+.article {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 750px;
+    margin: auto;
+    justify-content: left;
+    align-items: left;
+}

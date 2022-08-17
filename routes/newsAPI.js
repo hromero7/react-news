@@ -10,12 +10,17 @@ router.get("/trending", (req, res) => {
     
 });
 
-//politics route
-router.get("/politics", (req, res) => {
-    axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=politics&apiKey=${process.env.NEWS_API}`)
+//search route
+router.get("/search/:query", (req, res) => {
+    const { query } = req.params;
+    
+    axios.get(`https://newsapi.org/v2/top-headlines?q=${query}&apiKey=${process.env.NEWS_API}`)
     .then(response => {
         res.json(response.data)
     })
+    .catch(err => {
+        console.log(err.response);
+    }) 
 });
 
 //category route 
@@ -26,7 +31,7 @@ router.get("/category/:category", (req, res) => {
         res.json(response.data)
     })
     .catch(err => {
-        console.log(err.response.data.error)
+        console.log(err.response)
     })
 })
 
