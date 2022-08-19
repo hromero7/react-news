@@ -13,8 +13,8 @@ router.get("/trending", (req, res) => {
 //search route
 router.get("/search/:query", (req, res) => {
     const { query } = req.params;
-    
-    axios.get(`https://newsapi.org/v2/top-headlines?q=${query}&apiKey=${process.env.NEWS_API}`)
+
+    axios.get(`https://newsapi.org/v2/everything?q=${query}&apiKey=${process.env.NEWS_API}`)
     .then(response => {
         res.json(response.data)
     })

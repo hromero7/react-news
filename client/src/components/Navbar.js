@@ -56,7 +56,7 @@ const NavBar = () => {
                 <Link to="/science">
                     <a className="nav-link" href="#">SCIENCE</a>
                 </Link>
-                    <a className="nav-search" href="#" onClick={toggleSearch}>
+                    <a className="nav-search" onClick={toggleSearch}>
                         <i className="fa-solid fa-magnifying-glass"></i>
                     </a>
                 

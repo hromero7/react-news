@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* SEARCH PAGE */
+
+.resultNotFound {
+  margin-top: 10px;
+  font-size: 2rem;
+  color: grey;
+}
+
+.fa-triangle-exclamation {
+  margin-top: 50px;
+  font-size: 3rem;
+  color: grey;
+}

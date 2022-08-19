@@ -22,9 +22,14 @@ const SearchPage = () => {
     
     return (
         <div className="category-container">
-            <CategoryHeader category={query.toUpperCase()} />
-            {firstArticle.length > 0? 
-        <div> 
+            
+            {firstArticle === undefined?
+            <div>
+                <i className="fa-solid fa-triangle-exclamation"></i>
+                <div className="resultNotFound">NO SEARCH RESULTS FOUND FOR "{query.toUpperCase()}"</div> 
+            </div> :
+        <div>
+            <CategoryHeader category={query.toUpperCase()} /> 
             <TopStoryCard data={firstArticle} />
             <div className="article">
             {
@@ -37,7 +42,7 @@ const SearchPage = () => {
             </div>
 
         </div>
-            : "no result found"}
+             }
         </div>
     );
 }
