@@ -6,3 +6,14 @@
     justify-content: left;
     align-items: left;
 }
+
+@media screen and (max-width: 750px) {
+    .article {
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 750px;
+        margin: auto;
+        align-items: center;
+    }
+
+}

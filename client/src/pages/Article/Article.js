@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import newsLogo from "../../components/assets/newslogo.jpeg";
 import Video from "../../components/Video";
+import Moment from "react-moment";
 import "./article.css"
 
 const Article = () => {
@@ -19,7 +20,10 @@ const Article = () => {
                 <h1 className="article-title">{title}</h1>
                 <div className="author-container">
                     <h2 className="article-author">{author? `By: ${author}` : source}</h2>
-                    <p className="article-date">{date}</p>
+                    <Moment local format="MM/DD/YY hh:mm A" style={{display: "grid", justifyContent: "left"}}>{date}</Moment>
+                    {/* <Moment local format="hh:mm A" style={{display: "grid", justifyContent: "left"}}>{date}</Moment> */}
+                    {/* <p className="article-date">{date}</p> */}
+                    
                 </div>
                 
                 <img src={image? image : newsLogo} className="article-image" alt="article-image"/>

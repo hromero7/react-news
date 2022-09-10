@@ -3,12 +3,8 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
 
-    const [hideSearchBar, setHideSearchBar] = useState(true);
     const [searchTerm, setSearchTerm] = useState("");
 
-    const toggleSearch = () => {
-        setHideSearchBar(!hideSearchBar);
-    }
 
     const handleChange = (e) => {
         setSearchTerm(e.target.value);
@@ -56,7 +52,8 @@ const NavBar = () => {
                 <Link to="/science">
                     <a className="nav-link" href="#">SCIENCE</a>
                 </Link>
-                    <a className="nav-search" onClick={toggleSearch}>
+                    <a className="nav-search" data-bs-toggle="collapse" data-bs-target="#searchBarToggle" 
+                    aria-controls="searchBarToggle" aria-expanded="false" aria-label="Toggle navigation">
                         <i className="fa-solid fa-magnifying-glass"></i>
                     </a>
                 
@@ -65,7 +62,7 @@ const NavBar = () => {
           </div>
         </nav>
         
-        <div className={hideSearchBar? "hidden" : "search-container"}>
+        <div className="search-container collapse" id="searchBarToggle">
                 <form className="input-group mb-3">
                     <input type="text" className="form-control" placeholder="SEARCH" aria-label="Search bar" aria-describedby="button-addon2" onChange={handleChange}/>
                     <Link to={`/search/${searchTerm.trim()}`}>

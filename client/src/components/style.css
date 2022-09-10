@@ -120,8 +120,8 @@
 
 
 
-/* Article CSS */
-
+/* Card Component CSS */
+    
 .story {
     max-width: 300px;
     display: grid;
@@ -158,4 +158,56 @@
 
 .article-img:hover {
     opacity: 0.7;
+}
+
+/* FOOTER CSS */
+
+.footer{
+    margin-top: 300px;
+    text-align: center;
+    background-color: #3f3b3b;
+    color: white;
+    padding: 75px;
+}
+
+.footer p {
+    position: relative;
+    bottom: -65px;
+}
+
+@media screen and (max-width: 750px) {
+    .story {
+        max-width: 750px;
+        display: grid;
+        margin: auto;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .article-img {
+        width: 750px;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 15px;
+        margin-top: 0;
+        opacity: 1;
+        transition: .5s ease;
+        backface-visibility: hidden;
+    }
+
+    .story h1 {
+        text-align: left;
+        max-width: 750px;
+        margin-top: 15px;
+        margin-left: 10px;
+        /* font-size: 2.5rem; */
+        line-height: 1.2;
+        font-size: 2rem;
+    }
+    .story p {
+        text-align: left;
+        margin-left: 10px;
+        margin-bottom: 0;
+        font-size: 16px;
+    }
 }
