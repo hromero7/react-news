@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Card from "../../components/Card";
 import NewsAPI from "../../utils/NewsAPI";
 import CategoryHeader from "../../components/CategoryHeader";
@@ -10,6 +10,8 @@ const Category = () => {
     const { category } = useParams();
     const [articles, setArticles] = useState([]);
     const [firstArticle, setFirstArticle] = useState([]);
+    let navigate = useNavigate();
+
     useEffect(() => {
         if (category === "politics" || category === "covid") {
             NewsAPI.getSearchQuery(category)
@@ -30,6 +32,8 @@ const Category = () => {
 
     return (
         <div className="category-container">
+            {firstArticle === undefined? navigate("/404") :
+        <div>
             <CategoryHeader category={category.toUpperCase()} />
 
             <TopStoryCard data={firstArticle} />
@@ -42,7 +46,8 @@ const Category = () => {
             })
             }
             </div>
-            
+        </div>
+}
         </div>
     )
 }

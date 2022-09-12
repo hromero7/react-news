@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import newsLogo from "../../components/assets/newslogo.jpeg";
 import Video from "../../components/Video";
 import Moment from "react-moment";
@@ -9,11 +9,14 @@ const Article = () => {
     
     const location = useLocation();
     const { title, author, content, description, image, source, date, url } = location.state || "";
+    let navigate = useNavigate();
 
     useEffect(() => {
+        if (title === undefined) {
+            navigate("/404");
+        }
         window.scrollTo(0, 0)
       }, []);
-
     // console.log(location.state)
     return (
         <article className="article-main">
@@ -34,6 +37,7 @@ const Article = () => {
                     { source === "YouTube"? "Watch on YouTube" : "Continue Reading"}
                 </a>
         </article>
+        
     )
 }
 

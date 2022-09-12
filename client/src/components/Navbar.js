@@ -5,14 +5,8 @@ const NavBar = () => {
 
     const [searchTerm, setSearchTerm] = useState("");
 
-
     const handleChange = (e) => {
         setSearchTerm(e.target.value);
-    }
-
-    const handleSearch = (e) => {
-        // e.preventDefault();
-        console.log(searchTerm)
     }
 
     return (
@@ -65,8 +59,8 @@ const NavBar = () => {
         <div className="search-container collapse" id="searchBarToggle">
                 <form className="input-group mb-3">
                     <input type="text" className="form-control" placeholder="SEARCH" aria-label="Search bar" aria-describedby="button-addon2" onChange={handleChange}/>
-                    <Link to={`/search/${searchTerm.trim()}`}>
-                    <button className="btn btn-outline-secondary" type="submit" id="button-addon2" onClick={handleSearch}>
+                    <Link to={searchTerm? `/search/${searchTerm.trim()}` : `#`}>
+                    <button className="btn btn-outline-secondary" type="submit" id="button-addon2" >
                         <i className="fa-solid fa-magnifying-glass"></i>
                     </button>
                     </Link>                
