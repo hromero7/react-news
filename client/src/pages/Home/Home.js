@@ -8,7 +8,6 @@ const Home = () => {
 
     const [articles, setArticles] = useState([]);
     const [firstArticle, setFirstArticle] = useState([]);
-    const [searchTerm, setSearchTerm] = useState("");
 
 
     useEffect(() => {
@@ -20,23 +19,10 @@ const Home = () => {
         })
     }, []);
 
-    const handleChange = (e) => {
-        setSearchTerm(e.target.value);
-    }
-
-    const handleSearch = (e) => {
-        e.preventDefault();
-        console.log(searchTerm)
-    }
 
     return (
         <div className="home-container">
-            {/* <form className="input-group mb-3" onSubmit={handleSearch}>
-                <input type="text" className="form-control" placeholder="SEARCH" aria-label="Search bar" aria-describedby="button-addon2" onChange={handleChange}/>
-                <button className="btn btn-outline-secondary" type="submit" id="button-addon2">
-                <i className="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </form> */}
+            
             <h1 className="home-header">TRENDING</h1>
             <TopStoryCard data={firstArticle} />
             <div className="article">

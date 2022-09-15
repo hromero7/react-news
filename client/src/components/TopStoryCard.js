@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Moment from "react-moment";
 
 const TopStoryCard = (props) => {
-    console.log(props)
+    
     return (
         <article className="top-story">
             <Link to={`/article/${props.data.title}`} 
@@ -36,7 +36,7 @@ const TopStoryCard = (props) => {
             {/* <p className="author">{props.data.author? "By: " + props.data.author : ""}</p> */}
             <p className="source">{props.data.source? props.data.source.name : ""}</p>
             {/* <p className="time">{props.data.publishedAt}</p> */}
-            <Moment fromNow style={{display: "grid", justifyContent: "left", marginLeft: "10px"}}>{props.data.publishedAt}</Moment>
+            <Moment fromNow local style={{display: "grid", justifyContent: "left", marginLeft: "10px"}}>{props.data.publishedAt}</Moment>
         </article>
     )
 }

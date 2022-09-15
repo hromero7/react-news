@@ -3,8 +3,6 @@ import React from "react";
 
 const Video = ({ url }) => {
 
-    console.log(url);
-    
     const index = url.indexOf("=");
    
     const embedId = url.slice(index + 1, url.length).trim();

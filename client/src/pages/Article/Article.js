@@ -24,8 +24,6 @@ const Article = () => {
                 <div className="author-container">
                     <h2 className="article-author">{author? `By: ${author}` : source}</h2>
                     <Moment local format="MM/DD/YY hh:mm A" style={{display: "grid", justifyContent: "left"}}>{date}</Moment>
-                    {/* <Moment local format="hh:mm A" style={{display: "grid", justifyContent: "left"}}>{date}</Moment> */}
-                    {/* <p className="article-date">{date}</p> */}
                     
                 </div>
                 
