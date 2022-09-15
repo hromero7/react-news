@@ -1,6 +1,7 @@
 import React, {useEffect} from "react";
 import newsLogo from "./assets/newslogo.jpeg";
 import { Link } from "react-router-dom";
+import Moment from "react-moment";
 
 const Card = (props) => {
 console.log(props.data);
@@ -33,8 +34,10 @@ console.log(props.data);
             
             {/* <p className="author">{props.data.author? "By: " + props.data.author : ""}</p> */}
             <p className="source">{props.data.source? props.data.source.name : ""}</p>
-            <p className="time">{props.data.publishedAt}</p>
-           
+            {/* <p className="time">{props.data.publishedAt}</p> */}
+            <Moment fromNow>
+               {props.data.publishedAt}
+            </Moment>
         </article>
         
     )

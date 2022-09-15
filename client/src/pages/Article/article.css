@@ -51,6 +51,7 @@ a:hover {
     font-size: 1.6rem;
     text-align: left;
     line-height: 2;
+    padding: 15px;
 }
 
 .article-url {
@@ -83,4 +84,14 @@ a:hover {
     height: 100%;
     width: 100%;
     position: absolute;
+  }
+
+  @media screen and (max-width: 750px) {
+    .article-title {
+        margin-left: 10px;
+    }
+
+    .author-container {
+        margin-left: 10px;
+    }
   }

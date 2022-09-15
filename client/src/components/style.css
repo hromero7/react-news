@@ -101,7 +101,7 @@
     text-align: left;
     margin-left: 10px;
     margin-bottom: 0;
-    /* font-size: 2.5rem; */
+    font-size: 1.5rem;
 }
 .top-img {
     width: 750px;
@@ -142,7 +142,14 @@
     text-align: left;
     margin-left: 5px;
     margin-bottom: 0;
-    font-size: 12px;
+    font-size: 16px;
+}
+
+.story time {
+    text-align: left;
+    margin-left: 5px;
+    margin-bottom: 0;
+    font-size: 14px;
 }
 
 .article-img {
@@ -205,6 +212,13 @@
         font-size: 2rem;
     }
     .story p {
+        text-align: left;
+        margin-left: 10px;
+        margin-bottom: 0;
+        font-size: 1.5rem;
+    }
+
+    .story time {
         text-align: left;
         margin-left: 10px;
         margin-bottom: 0;
