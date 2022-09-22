@@ -14,3 +14,9 @@
     max-width: 730px;
     margin: auto;
 }
+
+@media screen and (max-width: 750px) {
+    .home-header {
+        font-size: 11vw;
+    }
+}
