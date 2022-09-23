@@ -1,4 +1,41 @@
-# Getting Started with Create React App
+# React News
+
+This news app lets you stay informed on breaking news and trending topics. Browse through different categories or search for specific topics to get the latest news. Built with React, JavaScript, JSX, Node.js, Express, HTML, CSS.
+
+You can access the deployed application here:
+[https://react-news-production.up.railway.app/](https://react-news-production.up.railway.app/)
+
+## The Challenge
+
+Create an application that mimics the features of popular news websites, where users can search for the latest headlines on any given topic. Implement a trending page and organize news articles in a clean and efficient manner.
+
+## The Output
+
+Screenshots of the completed application are below:
+
+**Trending Page**
+![](./client/public/trending-page.png)
+
+**Category Page**
+![](./client/public/category-page.png)
+
+**Search Page**
+![](./client/public/search-page.png)
+
+**Article Page**
+![](./client/public/article-page.png)
+
+## Installation
+
+Clone the repo:
+```
+git clone https://github.com/hromero7/react-news.git
+```
+
+Install NPM Packages
+```
+npm install
+```
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
