@@ -20,35 +20,53 @@ const NavBar = () => {
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div className="navbar-nav mx-auto">
                 <Link to="/">
-                    <a className="nav-link active" aria-current="page" href="#">TRENDING</a>
+                    <a className="nav-link active" aria-current="page" href="#">
+                        <span data-bs-toggle="collapse" data-bs-target=".navbar-collapse">TRENDING</span>
+                    </a>
                 </Link>
                 <Link to="/covid">
-                    <a className="nav-link" href="#">COVID-19</a>
+                    <a className="nav-link" href="#">
+                        <span data-bs-toggle="collapse" data-bs-target=".navbar-collapse">COVID-19</span>
+                    </a>
                 </Link>
                 <Link to="/politics">
-                    <a className="nav-link" href="#">POLITICS</a>
+                    <a className="nav-link" href="#">
+                        <span data-bs-toggle="collapse" data-bs-target=".navbar-collapse">POLITICS</span>
+                    </a>
                 </Link>
                 <Link to="/sports">
-                    <a className="nav-link" href="#">SPORTS</a>
+                    <a className="nav-link" href="#">
+                        <span data-bs-toggle="collapse" data-bs-target=".navbar-collapse">SPORTS</span>
+                    </a>
                 </Link>
                 <Link to="entertainment">
-                    <a className="nav-link" href="#">ENTERTAINMENT</a>
+                    <a className="nav-link" href="#">
+                        <span data-bs-toggle="collapse" data-bs-target=".navbar-collapse">ENTERTAINMENT</span>
+                    </a>
                 </Link>
                 <Link to="/business">
-                    <a className="nav-link" href="#">BUSINESS</a>
+                    <a className="nav-link" href="#">
+                        <span data-bs-toggle="collapse" data-bs-target=".navbar-collapse">BUSINESS</span>
+                    </a>
                 </Link>
                 <Link to="/technology">
-                    <a className="nav-link" href="#">TECH</a>
+                    <a className="nav-link" href="#">
+                        <span data-bs-toggle="collapse" data-bs-target=".navbar-collapse">TECH</span>
+                    </a>
                 </Link>
                 <Link to="/health">
-                    <a className="nav-link" href="#">HEALTH</a>
+                    <a className="nav-link" href="#">
+                        <span data-bs-toggle="collapse" data-bs-target=".navbar-collapse">HEALTH</span>
+                    </a>
                 </Link>
                 <Link to="/science">
-                    <a className="nav-link" href="#">SCIENCE</a>
+                    <a className="nav-link" href="#">
+                        <span data-bs-toggle="collapse" data-bs-target=".navbar-collapse">SCIENCE</span>
+                    </a>
                 </Link>
                     <a className="nav-search" data-bs-toggle="collapse" data-bs-target="#searchBarToggle" 
                     aria-controls="searchBarToggle" aria-expanded="false" aria-label="Toggle navigation">
-                        <i className="fa-solid fa-magnifying-glass"></i>
+                            <i className="fa-solid fa-magnifying-glass"></i>
                     </a>
                 
               </div>

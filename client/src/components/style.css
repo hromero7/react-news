@@ -194,6 +194,7 @@
     .article-img {
         width: 100%;
         height: auto;
+        min-height: 200px;
         object-fit: cover;
         border-radius: 15px;
         margin-top: 0;
@@ -228,6 +229,7 @@
     .top-img {
         width: 100%;
         height: auto;
+        min-height: 200px;
     }
 
     .category-header h1 {

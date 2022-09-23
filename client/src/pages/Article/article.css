@@ -89,9 +89,33 @@ a:hover {
   @media screen and (max-width: 750px) {
     .article-title {
         margin-left: 10px;
+        font-size: 4.5vw;
     }
 
     .author-container {
         margin-left: 10px;
     }
+
+    .article-image {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+    }
+
+    .article-author {
+        font-size: 3vw;
+    }
+    
+    .author-container time{
+        font-size: 3vw;
+    }
+
+    .article-description {
+        font-size: 3.2vw;
+    }
+
+    .article-content {
+        font-size: 3.4vw;
+    }
+    
   }
